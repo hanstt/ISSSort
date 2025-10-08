@@ -114,6 +114,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2126e8d47342287342924ec2b4a770a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1528e5f0ac4e37df224554a30cd34fab" id="r_a1528e5f0ac4e37df224554a30cd34fab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1528e5f0ac4e37df224554a30cd34fab">MakeHists</a> ()</td></tr>
 <tr class="separator:a1528e5f0ac4e37df224554a30cd34fab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1e990d82bfcc892a4b82738495bf4d6" id="r_af1e990d82bfcc892a4b82738495bf4d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1e990d82bfcc892a4b82738495bf4d6">ResetHist</a> (TObject *obj)</td></tr>
+<tr class="separator:af1e990d82bfcc892a4b82738495bf4d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f9af6d8c24462c83133ed285562fb12" id="r_a7f9af6d8c24462c83133ed285562fb12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f9af6d8c24462c83133ed285562fb12">ResetHists</a> ()</td></tr>
 <tr class="separator:a7f9af6d8c24462c83133ed285562fb12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d3965a923cdd2a95c98c10f095f6ad7" id="r_a9d3965a923cdd2a95c98c10f095f6ad7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d3965a923cdd2a95c98c10f095f6ad7">MakeTree</a> ()</td></tr>
@@ -152,6 +154,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab529a31b6288d7ad2595606acf9d9b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af031812a3497fef47131673178788b46" id="r_af031812a3497fef47131673178788b46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af031812a3497fef47131673178788b46">GetVMEChanID</a> ()</td></tr>
 <tr class="separator:af031812a3497fef47131673178788b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac18a7f84a3bfecfae2632879a88a707c" id="r_ac18a7f84a3bfecfae2632879a88a707c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac18a7f84a3bfecfae2632879a88a707c">ProcessTraceData</a> (unsigned int pos)</td></tr>
+<tr class="separator:ac18a7f84a3bfecfae2632879a88a707c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba7326d0b648b9fafd45e178b24b01dc" id="r_aba7326d0b648b9fafd45e178b24b01dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba7326d0b648b9fafd45e178b24b01dc">EBISOnly</a> ()</td></tr>
 <tr class="separator:aba7326d0b648b9fafd45e178b24b01dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d5367e8f70882f58e2aeaec75f69c7f" id="r_a9d5367e8f70882f58e2aeaec75f69c7f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d5367e8f70882f58e2aeaec75f69c7f">EBISWindow</a> (long long int t)</td></tr>
@@ -241,16 +245,14 @@ Private Attributes</h2></td></tr>
 <tr class="separator:adc762c006e8dcd641db60f3d06c5b3f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a282d6d26fb14aeeea68a0e647f34b70d" id="r_a282d6d26fb14aeeea68a0e647f34b70d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a282d6d26fb14aeeea68a0e647f34b70d">flag_caen_trace</a></td></tr>
 <tr class="separator:a282d6d26fb14aeeea68a0e647f34b70d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb32ce209c9c7d5de0baa7e97643b81a" id="r_aeb32ce209c9c7d5de0baa7e97643b81a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb32ce209c9c7d5de0baa7e97643b81a">flag_mesy_data0</a></td></tr>
-<tr class="separator:aeb32ce209c9c7d5de0baa7e97643b81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4d00c3562d964844a42fae475a70b1a" id="r_ac4d00c3562d964844a42fae475a70b1a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4d00c3562d964844a42fae475a70b1a">flag_mesy_data1</a></td></tr>
-<tr class="separator:ac4d00c3562d964844a42fae475a70b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5200f357e36c9a981fb9a091e4bd0aa" id="r_ad5200f357e36c9a981fb9a091e4bd0aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5200f357e36c9a981fb9a091e4bd0aa">flag_mesy_data2</a></td></tr>
-<tr class="separator:ad5200f357e36c9a981fb9a091e4bd0aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafc07a50def564d08df4948db48ed3b0" id="r_aafc07a50def564d08df4948db48ed3b0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafc07a50def564d08df4948db48ed3b0">flag_mesy_data3</a></td></tr>
-<tr class="separator:aafc07a50def564d08df4948db48ed3b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8296bcbc942cf7cadcbf3c4de8b3fdd4" id="r_a8296bcbc942cf7cadcbf3c4de8b3fdd4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8296bcbc942cf7cadcbf3c4de8b3fdd4">flag_mesy_trace</a></td></tr>
-<tr class="separator:a8296bcbc942cf7cadcbf3c4de8b3fdd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae55b7b45f52cc076d854e8df08f26a07" id="r_ae55b7b45f52cc076d854e8df08f26a07"><td class="memItemLeft" >struct {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45a3c3450c6951cea0ec84ed8c33d4aa" id="r_a45a3c3450c6951cea0ec84ed8c33d4aa"><td class="memItemLeft" >&#160;&#160;&#160;bool&#160;&#160;&#160;<a class="el" href="#a33a7f7345443581ffff94c222c8ce59e">has</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a45a3c3450c6951cea0ec84ed8c33d4aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6d2275b4dadce974b85255bf88511be" id="r_aa6d2275b4dadce974b85255bf88511be"><td class="memItemLeft" >&#160;&#160;&#160;uint64_t&#160;&#160;&#160;<a class="el" href="#a5076526b96eca902cf07d54e848549d6">ts</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:aa6d2275b4dadce974b85255bf88511be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae55b7b45f52cc076d854e8df08f26a07" id="r_ae55b7b45f52cc076d854e8df08f26a07"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae55b7b45f52cc076d854e8df08f26a07">mesy_ts</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ae55b7b45f52cc076d854e8df08f26a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af203b1fda71200eacfcc0b617291b254" id="r_af203b1fda71200eacfcc0b617291b254"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af203b1fda71200eacfcc0b617291b254">flag_caen_info</a></td></tr>
 <tr class="separator:af203b1fda71200eacfcc0b617291b254"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0caf2e760080752653c8d5f9b1d58d36" id="r_a0caf2e760080752653c8d5f9b1d58d36"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0caf2e760080752653c8d5f9b1d58d36">flag_mesy_info</a></td></tr>
@@ -407,7 +409,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00040">40</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00041">41</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="ad87623aa0fca763e43444bb3569ff9d0" name="ad87623aa0fca763e43444bb3569ff9d0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad87623aa0fca763e43444bb3569ff9d0">&#9670;&#160;</a></span>swap_t</h2>
@@ -434,7 +436,7 @@ Static Private Attributes</h2></td></tr>
 <tr><td class="fieldname"><a id="ad87623aa0fca763e43444bb3569ff9d0a18ada49c80c38c2d0d145c1fc20f8d82" name="ad87623aa0fca763e43444bb3569ff9d0a18ada49c80c38c2d0d145c1fc20f8d82"></a>SWAP_ENDIAN&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00123">123</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00126">126</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -500,7 +502,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00046">46</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00047">47</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -528,7 +530,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00111">111</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00114">114</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -555,7 +557,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00114">114</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00117">117</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -582,7 +584,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00110">110</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00113">113</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -609,7 +611,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00095">95</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00098">98</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -632,7 +634,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01874">1874</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01869">1869</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -660,7 +662,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01893">1893</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01888">1888</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -687,7 +689,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00082">82</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00085">85</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -714,7 +716,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00083">83</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00086">86</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -733,7 +735,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01338">1338</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01362">1362</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -752,7 +754,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01658">1658</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01675">1675</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -779,7 +781,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00106">106</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00109">109</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -806,7 +808,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00108">108</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00111">111</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -833,7 +835,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00107">107</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00110">110</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -852,7 +854,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01162">1162</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01188">1188</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -879,7 +881,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00159">159</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00162">162</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -898,7 +900,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00090">90</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00103">103</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -917,7 +919,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00065">65</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00078">78</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -948,7 +950,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l02004">2004</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01999">1999</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -967,7 +969,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01029">1029</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01055">1055</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -986,7 +988,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00803">803</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00817">817</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -1005,7 +1007,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00730">730</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00761">761</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -1024,7 +1026,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01177">1177</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01203">1203</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -1043,7 +1045,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01851">1851</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01846">1846</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -1062,7 +1064,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01752">1752</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01747">1747</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -1081,7 +1083,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01513">1513</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01537">1537</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -1100,7 +1102,26 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01622">1622</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01639">1639</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+
+</div>
+</div>
+<a id="ac18a7f84a3bfecfae2632879a88a707c" name="ac18a7f84a3bfecfae2632879a88a707c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac18a7f84a3bfecfae2632879a88a707c">&#9670;&#160;</a></span>ProcessTraceData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ISSConverter::ProcessTraceData </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>pos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00958">958</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -1127,7 +1148,26 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00105">105</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00108">108</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+
+</div>
+</div>
+<a id="af1e990d82bfcc892a4b82738495bf4d6" name="af1e990d82bfcc892a4b82738495bf4d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1e990d82bfcc892a4b82738495bf4d6">&#9670;&#160;</a></span>ResetHist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISSConverter::ResetHist </td>
+          <td>(</td>
+          <td class="paramtype">TObject *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00652">652</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -1146,7 +1186,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00636">636</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00667">667</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -1165,7 +1205,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00791">791</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00805">805</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -1184,7 +1224,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00719">719</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00750">750</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -1203,7 +1243,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00054">54</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00067">67</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -1222,7 +1262,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l02018">2018</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l02013">2013</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -1241,7 +1281,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l02011">2011</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l02006">2006</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -1260,7 +1300,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l02025">2025</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l02020">2020</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -1287,7 +1327,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00112">112</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00115">115</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1333,7 +1373,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00131">131</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00134">134</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1360,7 +1400,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00147">147</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00150">150</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1387,7 +1427,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00140">140</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00143">143</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1418,7 +1458,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01997">1997</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l01992">1992</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 </div>
 </div>
@@ -1443,7 +1483,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00313">313</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00315">315</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1467,7 +1507,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00260">260</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00262">262</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1491,7 +1531,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00290">290</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00292">292</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1515,7 +1555,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00190">190</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00193">193</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1539,7 +1579,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00189">189</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00192">192</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1563,7 +1603,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00186">186</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00189">189</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1587,7 +1627,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00261">261</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00263">263</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1611,7 +1651,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00310">310</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00312">312</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1635,7 +1675,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00271">271</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00273">273</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1659,7 +1699,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00270">270</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00272">272</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1683,7 +1723,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00272">272</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00274">274</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1707,7 +1747,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00273">273</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00275">275</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1731,7 +1771,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00275">275</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00277">277</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1755,7 +1795,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00274">274</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00276">276</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1779,7 +1819,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00277">277</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00279">279</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1803,7 +1843,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00276">276</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00278">278</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1827,7 +1867,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00200">200</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00203">203</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1851,7 +1891,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00183">183</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00186">186</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1875,7 +1915,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00258">258</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00260">260</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1899,7 +1939,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00257">257</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00259">259</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1923,7 +1963,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00235">235</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00237">237</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1947,7 +1987,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00234">234</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00236">236</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1971,7 +2011,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00233">233</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00235">235</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1995,7 +2035,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00208">208</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00211">211</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2019,7 +2059,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00209">209</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00212">212</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2043,7 +2083,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00210">210</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00213">213</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2067,7 +2107,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00211">211</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00214">214</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2091,7 +2131,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00212">212</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00215">215</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2115,7 +2155,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00219">219</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00221">221</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2139,7 +2179,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00213">213</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00216">216</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2163,103 +2203,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00174">174</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
-
-</div>
-</div>
-<a id="aeb32ce209c9c7d5de0baa7e97643b81a" name="aeb32ce209c9c7d5de0baa7e97643b81a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb32ce209c9c7d5de0baa7e97643b81a">&#9670;&#160;</a></span>flag_mesy_data0</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ISSConverter::flag_mesy_data0</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00214">214</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
-
-</div>
-</div>
-<a id="ac4d00c3562d964844a42fae475a70b1a" name="ac4d00c3562d964844a42fae475a70b1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4d00c3562d964844a42fae475a70b1a">&#9670;&#160;</a></span>flag_mesy_data1</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ISSConverter::flag_mesy_data1</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00215">215</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
-
-</div>
-</div>
-<a id="ad5200f357e36c9a981fb9a091e4bd0aa" name="ad5200f357e36c9a981fb9a091e4bd0aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5200f357e36c9a981fb9a091e4bd0aa">&#9670;&#160;</a></span>flag_mesy_data2</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ISSConverter::flag_mesy_data2</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00216">216</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
-
-</div>
-</div>
-<a id="aafc07a50def564d08df4948db48ed3b0" name="aafc07a50def564d08df4948db48ed3b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aafc07a50def564d08df4948db48ed3b0">&#9670;&#160;</a></span>flag_mesy_data3</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ISSConverter::flag_mesy_data3</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00217">217</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00177">177</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2283,31 +2227,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00220">220</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
-
-</div>
-</div>
-<a id="a8296bcbc942cf7cadcbf3c4de8b3fdd4" name="a8296bcbc942cf7cadcbf3c4de8b3fdd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8296bcbc942cf7cadcbf3c4de8b3fdd4">&#9670;&#160;</a></span>flag_mesy_trace</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ISSConverter::flag_mesy_trace</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00218">218</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00222">222</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2331,7 +2251,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00174">174</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00177">177</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2355,7 +2275,23 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00205">205</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00208">208</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+
+</div>
+</div>
+<a id="a33a7f7345443581ffff94c222c8ce59e" name="a33a7f7345443581ffff94c222c8ce59e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33a7f7345443581ffff94c222c8ce59e">&#9670;&#160;</a></span>has</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ISSConverter::has</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00218">218</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2379,7 +2315,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00292">292</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00294">294</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2403,7 +2339,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00293">293</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00295">295</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2427,7 +2363,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00281">281</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00283">283</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2451,7 +2387,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00280">280</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00282">282</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2475,7 +2411,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00282">282</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00284">284</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2499,7 +2435,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00283">283</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00285">285</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2523,7 +2459,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00297">297</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00299">299</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2547,7 +2483,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00285">285</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00287">287</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2571,7 +2507,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00284">284</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00286">286</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2595,7 +2531,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00296">296</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00298">298</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2619,7 +2555,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00294">294</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00296">296</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2643,7 +2579,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00295">295</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00297">297</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2667,7 +2603,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00229">229</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00231">231</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2691,7 +2627,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00230">230</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00232">232</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2715,7 +2651,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00224">224</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00226">226</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2739,7 +2675,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00228">228</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00230">230</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2763,7 +2699,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00225">225</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00227">227</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2787,7 +2723,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00181">181</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00184">184</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2811,7 +2747,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00226">226</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00228">228</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2835,7 +2771,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00227">227</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00229">229</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2859,7 +2795,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00301">301</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00303">303</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2883,7 +2819,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00287">287</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00289">289</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2907,7 +2843,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00286">286</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00288">288</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2931,7 +2867,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00300">300</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00302">302</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2955,7 +2891,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00298">298</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00300">300</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -2979,7 +2915,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00299">299</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00301">301</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3003,7 +2939,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00304">304</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00306">306</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3027,7 +2963,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00303">303</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00305">305</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3051,7 +2987,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00263">263</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00265">265</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3075,7 +3011,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00184">184</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00187">187</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3099,7 +3035,21 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00262">262</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00264">264</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+
+</div>
+</div>
+<a id="ae55b7b45f52cc076d854e8df08f26a07" name="ae55b7b45f52cc076d854e8df08f26a07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae55b7b45f52cc076d854e8df08f26a07">&#9670;&#160;</a></span>[struct]</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct  { ... }  ISSConverter::mesy_ts</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -3123,7 +3073,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00244">244</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00246">246</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3147,7 +3097,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00248">248</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00250">250</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3171,7 +3121,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00247">247</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00249">249</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3195,7 +3145,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00249">249</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00251">251</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3219,7 +3169,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00251">251</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00253">253</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3243,7 +3193,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00250">250</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00252">252</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3267,7 +3217,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00242">242</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00244">244</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3291,7 +3241,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00241">241</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00243">243</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3315,7 +3265,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00246">246</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00248">248</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3339,7 +3289,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00236">236</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00238">238</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3363,7 +3313,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00240">240</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00242">242</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3387,7 +3337,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00237">237</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00239">239</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3411,7 +3361,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00238">238</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00240">240</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3435,7 +3385,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00239">239</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00241">241</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3459,7 +3409,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00243">243</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00245">245</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3483,7 +3433,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00245">245</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00247">247</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3507,7 +3457,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00254">254</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00256">256</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3531,7 +3481,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00266">266</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00268">268</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3555,7 +3505,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00314">314</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00316">316</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3579,7 +3529,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00307">307</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00309">309</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3603,7 +3553,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00267">267</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00269">269</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3627,7 +3577,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00177">177</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00180">180</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3651,7 +3601,23 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00128">128</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00131">131</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+
+</div>
+</div>
+<a id="a5076526b96eca902cf07d54e848549d6" name="a5076526b96eca902cf07d54e848549d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5076526b96eca902cf07d54e848549d6">&#9670;&#160;</a></span>ts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t ISSConverter::ts</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00219">219</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3675,7 +3641,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00193">193</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00196">196</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3699,7 +3665,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00196">196</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00199">199</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3723,7 +3689,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00197">197</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00200">200</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3747,7 +3713,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00185">185</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00188">188</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -3771,7 +3737,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00259">259</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00261">261</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
