@@ -214,11 +214,10 @@ private:
 	bool flag_caen_data2;
 	bool flag_caen_data3;
 	bool flag_caen_trace;
-	bool flag_mesy_data0;
-	bool flag_mesy_data1;
-	bool flag_mesy_data2;
-	bool flag_mesy_data3;
-	bool flag_mesy_trace;
+        struct {
+          bool has;
+          uint64_t ts;
+        } mesy_ts;
 	bool flag_caen_info;
 	bool flag_mesy_info;
 

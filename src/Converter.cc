@@ -54,12 +54,8 @@ void ISSConverter::StartFile(){
 	flag_caen_trace = false;
 
 	// Flags for Mesytec data items
-	flag_mesy_data0 = false;
-	flag_mesy_data1 = false;
-	flag_mesy_data2 = false;
-	flag_mesy_data3 = false;
-	flag_mesy_trace = false;
-	
+	mesy_ts.has = false;
+
 	// clear the data vectors
 	std::vector<std::shared_ptr<ISSDataPackets>>().swap(data_vector);
 	std::vector<std::pair<unsigned long,double>>().swap(data_map);
@@ -1046,7 +1042,6 @@ unsigned int ISSConverter::ProcessTraceData( unsigned int pos ){
 			for( unsigned int k = 0; k < samples.size(); k++ )
 				mesy_data->AddSample( samples.at(k) );
 
-			flag_mesy_trace = true;
 			FinishMesytecData();
 
 		}
@@ -1563,7 +1558,7 @@ bool ISSConverter::ProcessMesytecData(){
 	my_tm_stp *= set->GetMesytecTimeStampUnits();
 
 	// First of the data items
-	if( !flag_mesy_data0 && !flag_mesy_data1 && !flag_mesy_data2 && !flag_mesy_data3 ){
+	if (!mesy_ts.has) {
 
 		// Make a MesyData item, need to add Qlong and traces
 		mesy_data->SetTimeStamp( my_tm_stp );
@@ -1578,10 +1573,7 @@ bool ISSConverter::ProcessMesytecData(){
 	// is not trace data. So set the flag to be true and finish the
 	// event with an empty trace.
 	//else if( flag_mesy_data0 && flag_mesy_data1 && flag_mesy_data3 ){
-	else if( flag_mesy_data0 && flag_mesy_data3 ){
-
-		// Fake trace flag, but with an empty trace
-		flag_mesy_trace = true;
+	else if( my_tm_stp != mesy_ts.ts ){
 
 		// Finish up the previous event
 		FinishMesytecData();
@@ -1594,6 +1586,9 @@ bool ISSConverter::ProcessMesytecData(){
 
 	}
 
+	mesy_ts.has = true;
+	mesy_ts.ts = my_tm_stp;
+
 	// Qlong
 	if( my_data_id == 0 ) {
 
@@ -1605,9 +1600,6 @@ bool ISSConverter::ProcessMesytecData(){
 		if( my_ch_id < set->GetNumberOfMesytecChannels() )
 			hmesy_qlong[my_mod_id][my_ch_id]->Fill( my_adc_data );
 		mesy_data->SetQlong( my_adc_data );
-
-		// Mark data received
-		flag_mesy_data0 = true;
 
 	}
 
@@ -1628,16 +1620,12 @@ bool ISSConverter::ProcessMesytecData(){
 			hmesy_qshort[my_mod_id][my_ch_id]->Fill( my_adc_data );
 		mesy_data->SetQshort( my_adc_data );
 
-		// Mark data received
-		flag_mesy_data1 = true;
-
 	}
 
 	// Fine timing
 	if( my_data_id == 3 ) {
 
 		my_adc_data = my_adc_data & 0x03FF; // 10 bits from 0
-		flag_mesy_data3 = true;
 
 		// Mesy timestamps are 10 ns precision? TBD
 		mesy_data->SetFineTime( (float)my_adc_data * 4. / 1000. );
@@ -1686,76 +1674,58 @@ void ISSConverter::ProcessMesytecLogicItem(){
 
 void ISSConverter::FinishMesytecData(){
 
-	// Got all items
-	if( ( flag_mesy_data0 && flag_mesy_data3 && flag_mesy_trace ) ){
+	// If it's a logic input, process that properly
+	if( mesy_data->GetChannel() >= set->GetNumberOfMesytecChannels() &&
+	    mesy_data->GetChannel() < set->GetNumberOfMesytecChannels() + set->GetNumberOfMesytecLogicInputs() ) {
 
-		// If it's a logic input, process that properly
-		if( mesy_data->GetChannel() >= set->GetNumberOfMesytecChannels() &&
-		    mesy_data->GetChannel() < set->GetNumberOfMesytecChannels() + set->GetNumberOfMesytecLogicInputs() ) {
+		ProcessMesytecLogicItem();
 
-			ProcessMesytecLogicItem();
+	} // logic item
 
-		} // logic item
+	// Else deal with a proper ADC item
+	else if( mesy_data->GetChannel() < set->GetNumberOfMesytecChannels() ) {
 
-		// Else deal with a proper ADC item
-		else if( mesy_data->GetChannel() < set->GetNumberOfMesytecChannels() ) {
+		// Fill histograms
+		hmesy_hit[mesy_data->GetModule()]->Fill( ctr_mesy_hit[mesy_data->GetModule()], mesy_data->GetTime(), 1 );
 
-			// Fill histograms
-			hmesy_hit[mesy_data->GetModule()]->Fill( ctr_mesy_hit[mesy_data->GetModule()], mesy_data->GetTime(), 1 );
+		// Difference between Qlong and Qshort
+		int qdiff = (int)mesy_data->GetQlong() - (int)mesy_data->GetQshort();
+		hmesy_qdiff[mesy_data->GetModule()][mesy_data->GetChannel()]->Fill( qdiff );
 
-			// Difference between Qlong and Qshort
-			int qdiff = (int)mesy_data->GetQlong() - (int)mesy_data->GetQshort();
-			hmesy_qdiff[mesy_data->GetModule()][mesy_data->GetChannel()]->Fill( qdiff );
+		// Choose the energy we want to use
+		unsigned short adc_value = 0;
+		std::string entype = cal->MesytecType( mesy_data->GetModule(), mesy_data->GetChannel() );
+		if( entype == "Qlong" ) adc_value = mesy_data->GetQlong();
+		else if( entype == "Qshort" ) adc_value = mesy_data->GetQshort();
+		else if( entype == "Qdiff" ) adc_value = mesy_data->GetQdiff();
+		my_energy = cal->MesytecEnergy( mesy_data->GetModule(), mesy_data->GetChannel(), adc_value );
+		mesy_data->SetEnergy( my_energy );
+		hmesy_cal[mesy_data->GetModule()][mesy_data->GetChannel()]->Fill( my_energy );
 
-			// Choose the energy we want to use
-			unsigned short adc_value = 0;
-			std::string entype = cal->MesytecType( mesy_data->GetModule(), mesy_data->GetChannel() );
-			if( entype == "Qlong" ) adc_value = mesy_data->GetQlong();
-			else if( entype == "Qshort" ) adc_value = mesy_data->GetQshort();
-			else if( entype == "Qdiff" ) adc_value = mesy_data->GetQdiff();
-			my_energy = cal->MesytecEnergy( mesy_data->GetModule(), mesy_data->GetChannel(), adc_value );
-			mesy_data->SetEnergy( my_energy );
-			hmesy_cal[mesy_data->GetModule()][mesy_data->GetChannel()]->Fill( my_energy );
-
-			// Check if it's over threshold
-			if( adc_value > cal->MesytecThreshold( mesy_data->GetModule(), mesy_data->GetChannel() ) )
-				mesy_data->SetThreshold( true );
-			else mesy_data->SetThreshold( false );
+		// Check if it's over threshold
+		if( adc_value > cal->MesytecThreshold( mesy_data->GetModule(), mesy_data->GetChannel() ) )
+			mesy_data->SetThreshold( true );
+		else mesy_data->SetThreshold( false );
 
 
-			// Set this data and fill event to tree
-			// Also add the time offset when we do this
-			// only if we are in the EBIS window, if the flag is set by the user
-			if( !flag_ebis || EBISWindow( mesy_data->GetTime() ) ) {
+		// Set this data and fill event to tree
+		// Also add the time offset when we do this
+		// only if we are in the EBIS window, if the flag is set by the user
+		if( !flag_ebis || EBISWindow( mesy_data->GetTime() ) ) {
 
-				mesy_data->SetTimeStamp( mesy_data->GetTime() + cal->MesytecTime( mesy_data->GetModule(), mesy_data->GetChannel() ) );
+			mesy_data->SetTimeStamp( mesy_data->GetTime() + cal->MesytecTime( mesy_data->GetModule(), mesy_data->GetChannel() ) );
 
-				if( !flag_source ) {
-					std::shared_ptr<ISSDataPackets> data_packet =
-						std::make_shared<ISSDataPackets>( mesy_data );
-					data_vector.push_back( data_packet );
-					data_map.push_back( std::make_pair<unsigned long,double>(
-						data_vector.size()-1, data_packet->GetTimeStamp() ) );
-				}
-
+			if( !flag_source ) {
+				std::shared_ptr<ISSDataPackets> data_packet =
+					std::make_shared<ISSDataPackets>( mesy_data );
+				data_vector.push_back( data_packet );
+				data_map.push_back( std::make_pair<unsigned long,double>(
+					data_vector.size()-1, data_packet->GetTimeStamp() ) );
 			}
 
-		} // adc item
+		}
 
-	}
-
-	// missing something
-	else if( (long long)my_tm_stp != (long long)mesy_data->GetTimeStamp() ) {
-
-		std::cout << "Missing something in Mesytec data and new event occured" << std::endl;
-		std::cout << " Qlong       = " << flag_mesy_data0 << std::endl;
-		std::cout << " Qshort      = " << flag_mesy_data1 << std::endl;
-		std::cout << " fine timing = " << flag_mesy_data3 << std::endl;
-		std::cout << " trace data  = " << flag_mesy_trace << std::endl;
-		std::cout << " current ts  = " << my_tm_stp << std::endl;
-		std::cout << " previous ts = " << mesy_data->GetTimeStamp() << std::endl;
-
-	}
+	} // adc item
 
 	// This is normal, just not finished yet
 	else return;
@@ -1764,11 +1734,7 @@ void ISSConverter::FinishMesytecData(){
 	ctr_mesy_hit[mesy_data->GetModule()]++;
 
 	// Assuming it did finish, in a good way or bad, clean up.
-	flag_mesy_data0 = false;
-	flag_mesy_data1 = false;
-	flag_mesy_data2 = false;
-	flag_mesy_data3 = false;
-	flag_mesy_trace = false;
+	mesy_ts.has = false;
 	info_data->ClearData();
 	mesy_data->ClearData();
 
